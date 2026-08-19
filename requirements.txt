@@ -1,0 +1,16 @@
+# Dependencies for Terminal News Assistant
+#
+# Phase 1 — Google News RSS
+feedparser==6.0.11
+#
+# Phase 2 — Reddit access
+praw==7.7.1
+#
+# Phase 3 — DuckDuckGo web search
+duckduckgo-search==6.3.7
+#
+# Phase 5 — Optional LLM Synthesis
+openai>=1.0.0
+#
+# Testing
+pytest==8.3.2

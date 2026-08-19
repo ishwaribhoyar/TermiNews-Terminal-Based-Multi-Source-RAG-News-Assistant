@@ -1,0 +1,32 @@
+# Environment
+.venv/
+venv/
+env/
+
+# Python byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Secrets — never commit
+.env
+
+# IDE / OS artefacts
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
