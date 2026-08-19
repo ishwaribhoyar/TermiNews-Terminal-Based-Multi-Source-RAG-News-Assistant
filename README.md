@@ -90,18 +90,19 @@ flowchart TD
         Fmt["Text Wrapper & Citation Resolver (terminal.py)"]
     end
 
-    CLI -->|User Query| Main
-    Main -->|Dispatches Query| GN
-    Main -->|Dispatches Query| RD
-    Main -->|Dispatches Query| DDG
-    GN -->|NewsItem[]| Agg
-    RD -->|RedditItem[]| Agg
-    DDG -->|WebItem[]| Agg
+    CLI -->|"User Query"| Main
+    Main -->|"Dispatches Query"| GN
+    Main -->|"Dispatches Query"| RD
+    Main -->|"Dispatches Query"| DDG
+    GN -->|"NewsItem Feed"| Agg
+    RD -->|"RedditItem Feed"| Agg
+    DDG -->|"WebItem Feed"| Agg
     Agg --> UC
-    UC -->|Query + Items| LLM
-    LLM --> Prompt --> OR
-    OR -->|SynthesizedAnswer + Citations| Fmt
-    Fmt -->|Rendered View| CLI
+    UC -->|"UnifiedContext"| LLM
+    LLM --> Prompt
+    Prompt --> OR
+    OR -->|"Synthesized Answer"| Fmt
+    Fmt -->|"Formatted View"| CLI
 ```
 
 ---
